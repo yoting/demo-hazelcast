@@ -9,12 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 @Entity
 @Table(name = "hazelcast_person")
 public class Person implements Serializable {
-
+	private static final long serialVersionUID = 8821657922113203891L;
 	private long id;
 	private String name;
 	private int age;
@@ -72,8 +70,7 @@ public class Person implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Entity [id=" + id + ", name=" + name + ", age=" + age
-				+ ", isMan=" + isMan + "]";
+		return "Entity [id=" + id + ", name=" + name + ", age=" + age + ", isMan=" + isMan + "]";
 	}
 
 }
